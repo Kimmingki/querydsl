@@ -65,7 +65,7 @@ class MemberJPARepositoryTest {
 //        condition.setAgeLoe(40);
         condition.setTeamName("teamB");
 
-        List<MemberTeamDTO> result = memberJPARepository.searchByBuilder(condition);
+        List<MemberTeamDTO> result = memberJPARepository.search(condition);
 
         assertThat(result).extracting("username").containsExactly("member3", "member4");
     }
